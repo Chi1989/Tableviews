@@ -7,10 +7,10 @@
 
 import UIKit
 
+// MARK: - The extension for the tabbar controllers, the second tabbar is holding the collectionview
 extension HomePageViewController {
-     func tabBars() {
+    func tabBars() {
         let tabBarVc = UITabBarController()
-        
         let vc1 = UINavigationController(rootViewController: HomePageViewController())
         let vc2 = UINavigationController(rootViewController: SecondHomeViewController())
         let vc3 = UINavigationController(rootViewController: ThirdViewController())
@@ -27,6 +27,7 @@ extension HomePageViewController {
     }
 }
 
+// MARK: First View Controller
 class FirstViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,10 +36,12 @@ class FirstViewController: UIViewController {
     }
 }
 
+// MARK: Second View Controller
 class SecondHomeViewController: UIViewController {
     
-    var clothsArray: [Clothing] = [Clothing]()
+    var clothArray: [Clothing] = [Clothing]()
     
+    //MARK: Properties
     lazy var titleLabel: UILabel = {
         let label = UILabel()
         label.text = "Your Favorite Clothing"
@@ -50,19 +53,16 @@ class SecondHomeViewController: UIViewController {
     }()
     
     lazy var collectionView: UICollectionView = {
-        
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical
-        layout.sectionInset = UIEdgeInsets(top: 20, left: 10, bottom: 10, right: 10)
-        layout.itemSize = CGSize(width: 60, height: 60)
+        layout.sectionInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
+        layout.itemSize = CGSize(width: 110, height: 110)
         let collection = UICollectionView(frame: self.view.frame, collectionViewLayout: layout)
         collection.translatesAutoresizingMaskIntoConstraints = false
         collection.delegate = self
         collection.dataSource = self
-        collection.frame = view.bounds
-        collection.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "CollectionViewCell")
+        collection.register(HomeCollectionViewCell.self, forCellWithReuseIdentifier: "CollectionViewCell")
         view.addSubview(collection)
-        
         return collection
     }()
     
@@ -73,6 +73,7 @@ class SecondHomeViewController: UIViewController {
         setUpViews()
     }
     
+    // MARK: - Setting of the properties to the parent view and constraints
     func setUpViews() {
         view.addSubview(titleLabel)
         view.addSubview(collectionView)
@@ -84,12 +85,12 @@ class SecondHomeViewController: UIViewController {
             collectionView.topAnchor.constraint(equalTo: titleLabel.topAnchor, constant: 30),
             collectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10),
             collectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -10),
-            
+            collectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -10),
         ])
     }
-    
 }
 
+// MARK: Third View Controller
 class ThirdViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -98,6 +99,7 @@ class ThirdViewController: UIViewController {
     }
 }
 
+// MARK: Fourth View Controller
 class FourthViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -106,6 +108,7 @@ class FourthViewController: UIViewController {
     }
 }
 
+// MARK: Fifth View Controller
 class FiveViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()

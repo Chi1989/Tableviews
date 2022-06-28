@@ -7,11 +7,10 @@
 
 import UIKit
 
+// MARK: Properties
 class HomePageViewController: UIViewController {
-   
+    
     var shoesArrays: [ShoesCarts] = [ShoesCarts]()
-    
-    
     
     let items = ["Paid", "Free", "Top Grossing"]
     
@@ -21,7 +20,6 @@ class HomePageViewController: UIViewController {
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = #colorLiteral(red: 0.4683449268, green: 0.2072214186, blue: 0.1971801519, alpha: 1)
         label.font = UIFont.systemFont(ofSize: 14, weight: .bold)
-        
         return label
     }()
     
@@ -38,7 +36,6 @@ class HomePageViewController: UIViewController {
         segment.selectedSegmentIndex = 0
         segment.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: #colorLiteral(red: 0.6835213304, green: 0.4074342251, blue: 0.3989093304, alpha: 1)], for: UIControl.State.selected)
         segment.translatesAutoresizingMaskIntoConstraints = false
-        
         return segment
     }()
     
@@ -49,21 +46,18 @@ class HomePageViewController: UIViewController {
         table.delegate = self
         table.translatesAutoresizingMaskIntoConstraints = false
         table.register(HomeTableViewCell.self, forCellReuseIdentifier: "Cell")
-//        table.frame = view.bounds
         table.separatorColor = .clear
-//        table.separatorInset = UIEdgeInsets(top: 30, left: 5, bottom: 30, right: 5)
-        //table.frame = self.view.frame
-        
         return table
     }()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = #colorLiteral(red: 0.9697003961, green: 0.9253903031, blue: 0.8205071092, alpha: 1)
         setUpViews()
     }
+    // MARK: Setting of the subviews to the parent view and constraints
     func setUpViews() {
-       let subViews = [tableview, categoriesLabel, listButton, segmentControl]
+        let subViews = [tableview, categoriesLabel, listButton, segmentControl]
         for sebView in subViews{
             view.addSubview(sebView)
         }
@@ -82,10 +76,6 @@ class HomePageViewController: UIViewController {
             tableview.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             tableview.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             tableview.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -50),
-            
         ])
     }
-
 }
-
-

@@ -14,13 +14,13 @@
 		B49CBAA52866F7E4000C8308 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B49CBAA32866F7E4000C8308 /* LaunchScreen.storyboard */; };
 		B49CBAAD28673334000C8308 /* HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B49CBAAC28673334000C8308 /* HomePageViewController.swift */; };
 		B49CBAAF28674BC2000C8308 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B49CBAAE28674BC2000C8308 /* HomeTableViewCell.swift */; };
-		B49CBAB1286766D6000C8308 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B49CBAB0286766D6000C8308 /* Extensions.swift */; };
+		B49CBAB1286766D6000C8308 /* TableviewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B49CBAB0286766D6000C8308 /* TableviewExtensions.swift */; };
 		B49CBAB32867D162000C8308 /* TabBarViewcontroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = B49CBAB22867D162000C8308 /* TabBarViewcontroller.swift */; };
 		B49CBAB52867E109000C8308 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = B49CBAB42867E109000C8308 /* Model.swift */; };
 		B49CBAB72868DD57000C8308 /* HomeScreenTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B49CBAB62868DD57000C8308 /* HomeScreenTabBarViewController.swift */; };
-		B49CBAC5286B2619000C8308 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B49CBAC4286B2619000C8308 /* Extension.swift */; };
+		B49CBAC5286B2619000C8308 /* CollectionviewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B49CBAC4286B2619000C8308 /* CollectionviewExtension.swift */; };
 		B49CBAC7286B2B2D000C8308 /* HomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B49CBAC6286B2B2D000C8308 /* HomeCollectionViewCell.swift */; };
-		B49CBAC9286B2BF1000C8308 /* Datas.swift in Sources */ = {isa = PBXBuildFile; fileRef = B49CBAC8286B2BF1000C8308 /* Datas.swift */; };
+		B49CBAC9286B2BF1000C8308 /* ModelClothing.swift in Sources */ = {isa = PBXBuildFile; fileRef = B49CBAC8286B2BF1000C8308 /* ModelClothing.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,13 +33,13 @@
 		B49CBAA62866F7E4000C8308 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B49CBAAC28673334000C8308 /* HomePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageViewController.swift; sourceTree = "<group>"; };
 		B49CBAAE28674BC2000C8308 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
-		B49CBAB0286766D6000C8308 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		B49CBAB0286766D6000C8308 /* TableviewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableviewExtensions.swift; sourceTree = "<group>"; };
 		B49CBAB22867D162000C8308 /* TabBarViewcontroller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewcontroller.swift; sourceTree = "<group>"; };
 		B49CBAB42867E109000C8308 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		B49CBAB62868DD57000C8308 /* HomeScreenTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenTabBarViewController.swift; sourceTree = "<group>"; };
-		B49CBAC4286B2619000C8308 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		B49CBAC4286B2619000C8308 /* CollectionviewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionviewExtension.swift; sourceTree = "<group>"; };
 		B49CBAC6286B2B2D000C8308 /* HomeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewCell.swift; sourceTree = "<group>"; };
-		B49CBAC8286B2BF1000C8308 /* Datas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Datas.swift; sourceTree = "<group>"; };
+		B49CBAC8286B2BF1000C8308 /* ModelClothing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelClothing.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,7 +87,7 @@
 			isa = PBXGroup;
 			children = (
 				B49CBAB42867E109000C8308 /* Model.swift */,
-				B49CBAC8286B2BF1000C8308 /* Datas.swift */,
+				B49CBAC8286B2BF1000C8308 /* ModelClothing.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -140,8 +140,8 @@
 		B49CBACA286B33C3000C8308 /* Extension+ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				B49CBAC4286B2619000C8308 /* Extension.swift */,
-				B49CBAB0286766D6000C8308 /* Extensions.swift */,
+				B49CBAC4286B2619000C8308 /* CollectionviewExtension.swift */,
+				B49CBAB0286766D6000C8308 /* TableviewExtensions.swift */,
 			);
 			path = "Extension+ViewControllers";
 			sourceTree = "<group>";
@@ -226,17 +226,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				B49CBAAD28673334000C8308 /* HomePageViewController.swift in Sources */,
-				B49CBAB1286766D6000C8308 /* Extensions.swift in Sources */,
+				B49CBAB1286766D6000C8308 /* TableviewExtensions.swift in Sources */,
 				B49CBAB72868DD57000C8308 /* HomeScreenTabBarViewController.swift in Sources */,
 				B49CBAAF28674BC2000C8308 /* HomeTableViewCell.swift in Sources */,
 				B49CBAB32867D162000C8308 /* TabBarViewcontroller.swift in Sources */,
 				B49CBA9D2866F7E0000C8308 /* ViewController.swift in Sources */,
 				B49CBAC7286B2B2D000C8308 /* HomeCollectionViewCell.swift in Sources */,
-				B49CBAC9286B2BF1000C8308 /* Datas.swift in Sources */,
+				B49CBAC9286B2BF1000C8308 /* ModelClothing.swift in Sources */,
 				B49CBA992866F7E0000C8308 /* AppDelegate.swift in Sources */,
 				B49CBA9B2866F7E0000C8308 /* SceneDelegate.swift in Sources */,
 				B49CBAB52867E109000C8308 /* Model.swift in Sources */,
-				B49CBAC5286B2619000C8308 /* Extension.swift in Sources */,
+				B49CBAC5286B2619000C8308 /* CollectionviewExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,6 +7,7 @@
 
 import UIKit
 
+// MARK: - The bottom tabbar controllers
 class HomeScreenTabBarViewController: UITabBarController {
     
     let vc1 = UINavigationController(rootViewController: HomePageViewController())
